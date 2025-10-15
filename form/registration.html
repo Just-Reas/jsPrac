@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/root.css">
+</head>
+<body>
+    <section class="registration">
+        <div class="container">
+            <form class="registration__window" method="post">
+
+                <div class="window__title">Sign Up</div>
+
+                <div class="window__line__up"></div>
+
+                <label for="username">Login:</label>
+                <input id="username" name="username" autocomplete="username" placeholder=" " type="text" required data-js-user>
+
+                <label for="email">Email:</label>
+                <input id="email" name="email" autocomplete="email" type="email" required data-js-email>
+
+                <label for="password">Password:</label>
+                <input id="password" name="password" autocomplete="new-password" type="password" required data-js-password>
+
+                <label for="password__repeat">Confirm password:</label>
+                <input id="password__repeat" name="password__repeat" autocomplete="new-password" type="password" required data-js-password-repeat>
+
+                <div class="window__line__down"></div>
+
+                <button type="button" class="window__button">Let's go!</button>
+
+            </form>
+        </div>
+
+        <div class="error__modal">
+            <div class="modal__container">
+                <div id="modal__title__id" class="modal__title">ERROR</div>
+                <div id="modal__text__id" class="modal__text">Текст ошибки</div>
+                <button id="modal__close__id "class="modal__close">Close</button>
+            </div>
+        </div>
+
+    </section>
+    <script src="./js/animation.js"></script>
+    <script src="./js/enter.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/local-storage.js"></script>
+</body>
+</html>
