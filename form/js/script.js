@@ -289,7 +289,12 @@ function handleButtonClick(event) {
 
     openModalSuccess('Registration done!')
 
-    formElement.submit()
+    setTimeout(() => {
+        const currentUrl = new URL(window.location.href)
+        currentUrl.searchParams.set('success', 'true')
+        window.location.href = currentUrl.toString()
+    }, 3000)
+
 
     if (window.formStorage && window.formStorage.clearOnSuccess) {
         window.formStorage.clearOnSuccess()
